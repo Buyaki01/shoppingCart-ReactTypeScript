@@ -1,4 +1,9 @@
 import React, { useState } from 'react'
+import axios from 'axios'
+
+const axiosInstance = axios.create({
+  baseURL: 'http://localhost:3000',
+})
 
 interface AddProductProps {
   
@@ -22,10 +27,14 @@ const AddProduct: React.FC<AddProductProps> = () => {
     setProductForm({ ...productForm, [name]: value })
   }
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Here, you can handle the form submission and make an API request to send the product data to the backend
-    console.log(productForm); // Example: Log the form data
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    try {
+      await axiosInstance.post('/products', productForm)
+      setProductForm({ sku: '', name: '', price: 0 })
+    } catch (error) {
+      console.error('Error adding product:', error)
+    }
   }
 
   return (
