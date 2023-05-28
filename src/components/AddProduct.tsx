@@ -1,21 +1,12 @@
 import React, { useState } from 'react'
-import axios from 'axios'
-
-const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000',
-})
-
-interface AddProductProps {
-  
-}
-
+import axiosInstance from './axiosInstance'
 interface ProductForm {
   sku: string
   name: string
   price: number
 }
 
-const AddProduct: React.FC<AddProductProps> = () => {
+const AddProduct: React.FC = () => {
   const [productForm, setProductForm] = useState<ProductForm>({
     sku: '',
     name: '',
