@@ -7,6 +7,14 @@ button.primary{
   @apply p-2 my-2 w-full text-white rounded-2xl
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], input[type="file"] {
   @apply w-full border my-2 py-2 px-3 rounded-2xl
+}
+
+button {
+  background-color: rgb(146, 212, 59);
+}
+
+.addPhoto{
+  background-color: rgb(146, 212, 59);
 }

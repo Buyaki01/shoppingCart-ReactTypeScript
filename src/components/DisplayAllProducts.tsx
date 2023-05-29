@@ -16,6 +16,9 @@ const DisplayAllProducts: React.FC = () => {
       {products.map((product: any) => (
         <div key={product._id}>
           <h3>{product.name}</h3>
+          <div>
+            {product.photos}
+          </div>
           <p>Price: ${product.price}</p>
         </div>
       ))}

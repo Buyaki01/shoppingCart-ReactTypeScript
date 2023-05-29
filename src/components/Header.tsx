@@ -4,7 +4,7 @@ const Header: React.FC = () => {
   return(
     <div className="m-2">
       <Link to={'/'}>
-        <h2 className="text-2xl">Pearls</h2>
+        <h2 className="header text-4xl">Pearls</h2>
       </Link>
     </div>
   )
