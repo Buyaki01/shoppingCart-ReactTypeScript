@@ -12,11 +12,11 @@ const DisplayAllProducts: React.FC = () => {
   })
 
   return(
-    <div className="m-3">
+    <div className="m-3 grid grid-cols-6">
       {products.map((product: any) => (
         <div key={product._id}>
           <h3>{product.name}</h3>
-          <p>Price: {product.price}</p>
+          <p>Price: ${product.price}</p>
         </div>
       ))}
     </div>

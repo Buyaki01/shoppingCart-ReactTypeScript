@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axiosInstance from './axiosInstance'
+
 interface ProductForm {
   sku: string
   name: string
@@ -13,6 +15,8 @@ const AddProduct: React.FC = () => {
     price: 0,
   })
 
+  const navigate = useNavigate()
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target
     setProductForm({ ...productForm, [name]: value })
@@ -23,6 +27,7 @@ const AddProduct: React.FC = () => {
     try {
       await axiosInstance.post('/products', productForm)
       setProductForm({ sku: '', name: '', price: 0 })
+      navigate('/')
     } catch (error) {
       console.error('Error adding product:', error)
     }
