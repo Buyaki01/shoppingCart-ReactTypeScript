@@ -13,7 +13,6 @@ const DisplayAllProducts: React.FC = () => {
 
   return(
     <div>
-      <h2 className="text-2xl">Pearls</h2>
       {products.map((product: any) => (
         <div key={product._id}>
           <h3>{product.name}</h3>

@@ -1,4 +1,7 @@
-@tailwind base
-@tailwind components
-@tailwind utilities
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+button{
+  background-color: #d40d9a;
+}
