@@ -12,7 +12,7 @@ const DisplayAllProducts: React.FC = () => {
   })
 
   return(
-    <div>
+    <div className="m-3">
       {products.map((product: any) => (
         <div key={product._id}>
           <h3>{product.name}</h3>

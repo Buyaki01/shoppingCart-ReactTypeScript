@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const Navbar: React.FC = () => {
   return(
-    <nav className="flex gap-2 justify-center">
+    <nav className="mb-5 flex gap-2 justify-center">
       <div className="border rounded-lg p-2">
         <Link to={'/profile'}>
           My Profile

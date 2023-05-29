@@ -30,7 +30,7 @@ const AddProduct: React.FC = () => {
 
   return (
     <div>
-      <h2>Add Product</h2>
+      <h2 className='flex justify-center text-2xl'>Add Product</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="sku">SKU:</label>
@@ -65,7 +65,7 @@ const AddProduct: React.FC = () => {
             required
           />
         </div>
-        <button type="submit">Add Product</button>
+        <button type="submit" className='primary'>Add Product</button>
       </form>
     </div>
   )

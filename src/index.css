@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-button{
+button.primary{
   background-color: #d40d9a;
+  @apply p-2 my-2 w-full text-white rounded-2xl
+}
+
+input[type="text"], input[type="number"] {
+  @apply w-full border my-2 py-2 px-3 rounded-2xl
 }
