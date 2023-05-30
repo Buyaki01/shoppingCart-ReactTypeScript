@@ -34,7 +34,7 @@ const AddProduct: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className='m-3'>
       <h2 className='flex justify-center text-2xl'>Add Product</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -70,6 +70,22 @@ const AddProduct: React.FC = () => {
             required
           />
         </div>
+
+        <div>
+          <label htmlFor="image" className="h-32 w-48 cursor-pointer flex items-center gap-1 justify-center border bg-transparent rounded-2xl p-2 text-2xl text-gray-600">
+          <input
+            type="file"
+            id="image"
+            name="image"
+            accept="image/*"
+            // onChange={handleImageChange}
+            required
+            className='hidden'
+          />
+            Upload&nbsp;Photo
+          </label>
+        </div>
+
         <button type="submit" className='primary'>Add Product</button>
       </form>
     </div>
